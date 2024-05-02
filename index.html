@@ -4,6 +4,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.slide-container .prev,
+.slide-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slide-container .prev:hover,
+.slide-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.slide-container .prev {
+  left: 2px;
+}
+
+.slide-container .next {
+  right: 2px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  background-color: #dfd6ce;
+}
+
+.dots-container .dot.active {
+  border: 2px solid green;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.slide-container .slide {
+  display: none;
+  width: 100%;
+}
+
+.slide-container .slide.fade {
+  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-container .slide img {
+  width: 100%;
+}
 .container1{
 font-size:30px;
 padding:10px;
@@ -152,6 +230,38 @@ body {margin:0;font-family:Arial}
 </div>
 
 <div class="container1">Welcome to Beyond Data</div>
+<div class="slide-container">
+      <div class="slide fade">
+        <img src='./images/data1.jpg' alt=''>
+      </div>
+      <div class="slide fade">
+        <img src='./images/data2.jpg' alt=''>
+      </div>
+	  <div class="slide fade">
+        <img src='./images/data3.jpg' alt=''>
+      </div>
+	  <div class="slide fade">
+        <img src='./images/data4.jpg' alt=''>
+      </div>
+	  <div class="slide fade">
+        <img src='./images/data5.jpg' alt=''>
+      </div>
+	  <div class="slide fade">
+        <img src='./images/data6.jpg' alt=''>
+      </div>
+	  <div class="slide fade">
+        <img src='./images/data7.jpg' alt=''>
+      </div>
+
+      <a href="#" class="prev" title="Previous">&#10094</a>
+      <a href="#" class="next" title="Next">&#10095</a>
+    </div>
+    <div class="dots-container">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -161,6 +271,49 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide, index) => {
+    slide.style.display = "none"
+    dots.forEach((dot, index) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
+}
+
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
+}
+
+document.querySelector(".next").addEventListener('click', next)
+
+document.querySelector(".prev").addEventListener('click', prev)
+
+
+setInterval(() => {
+  next()
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    console.log(currentSlide)
+    init(i)
+    currentSlide = i
+  })
+})
+
+
 </script>
 </body>
 </html>
