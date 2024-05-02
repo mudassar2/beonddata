@@ -7,10 +7,22 @@
 .container1{
 font-size:30px;
 padding:10px;
-border:1px solid black;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 margin:2px;
 text-align:center;
+animation: fadeInAnimation ease 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
 }
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 body {margin:0;font-family:Arial}
 
 .topnav {
@@ -120,7 +132,7 @@ body {margin:0;font-family:Arial}
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="./">Beyond Data</a>
+  <a href="#">Beyond Data</a>
   <a href="index.html" class="active">Home</a>
     <div class="dropdown">
     <button class="dropbtn">Our Services 
