@@ -7,13 +7,23 @@
 .container {
 	margin:auto;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
+    width: 300px;
+    text-align: center;animation: fadeInAnimation ease 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
 }
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
 
 h1 {
     color: #333;
@@ -169,7 +179,7 @@ body {margin:0;font-family:Arial}
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="./">Beyond Data</a>
+  <a href="#">Beyond Data</a>
   <a href="../index.html" class="active">Home</a>
     <div class="dropdown">
     <button class="dropbtn">Our Services 
