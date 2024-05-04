@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.container1{
+font-size:30px;
+padding:10px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+margin:2px;
+animation: fadeInAnimation ease 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#">Beyond Data</a>
+  <a href="../index.html" class="active">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn">Our Services 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="./data.html">Data Analytics</a>
+	  <a href="./bioinformatics.html">Bioinformatics</a>
+    </div>
+  </div> 
+  <a href="./contact.html">Contact Us</a>
+
+  <a href="about.html">About Us</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="container1">
+<h1>Power BI Dashboard Design,DAX</h1>
+<p>Our team of Power BI Experts offers end-to-end services,
+from consulting and implementation to training and support ,to ensure our clients 
+get maximum insights form their data.
+Whether its creating Interactive Dashboards,Generating insightful reports,
+or implementing data-driven solutions,we leveraged the advanced capabilities of Power BI to 
+drive informed decision-making and foster a culture od data-driven innovation within our client organization.</p>
+<h1>Excel VBA Code,Automation and Dashboard Design</h1>
+<p>we specialize in Excel dashboard automation, empowering businesses to 
+streamline their data visualization processes and make informed decisions with ease. 
+Leveraging our expertise in Excel and advanced automation techniques, we design and develop 
+customized dashboards tailored to the unique needs of our clients. From data integration and 
+cleansing to dynamic visualization and interactive reporting, our solutions enable organizations 
+to transform raw data into actionable insights at the click of a button. By automating repetitive 
+tasks and eliminating manual errors, we help our clients save time, reduce costs, and increase productivity. 
+Whether you're tracking key performance indicators, monitoring business metrics, or 
+analyzing sales trends, our Excel dashboard automation services provide the agility
+ and flexibility needed to stay ahead in today's fast-paced business environment. 
+Partner with us to unlock the full potential of your data and drive business success.</p>
+<h1>Report Automation</h1>
+<p>We Specializd in report automation services, offering tailored solutions to streamline and enhance your reporting processes. 
+Leveraging advanced automation tools and techniques, we help businesses automate the generation, distribution, 
+and analysis of reports, saving valuable time and resources. Whether you require daily, weekly, or monthly reports, 
+we design custom workflows to automatically gather data from multiple sources, consolidate information, and generate 
+insightful reports with minimal human intervention. Our solutions not only increase operational efficiency but also 
+ensure accuracy and consistency in reporting, eliminating the risk of manual errors. With customizable templates and 
+dynamic reporting capabilities, we empower organizations to make data-driven decisions faster and more confidently. 
+From financial reports and performance metrics to sales forecasts and marketing analytics, our report automation 
+services enable you to focus on strategic initiatives while we handle the routine reporting tasks. 
+Partner with us to unlock the full potential of your data and optimize your reporting processes for maximum impact.</p>
+  </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
