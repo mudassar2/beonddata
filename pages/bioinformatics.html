@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.container1{
+font-size:30px;
+padding:10px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+margin:2px;
+animation: fadeInAnimation ease 5s;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#">Beyond Data</a>
+  <a href="../index.html" class="active">Home</a>
+    <div class="dropdown">
+    <button class="dropbtn">Our Services 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Data Analytics</a>
+      <a href="#">Excel Dashboards & Automation</a>
+      <a href="#">Power BI Dashboards & DAX</a>
+	  <a href="#">Report Automation</a>
+	  <a href="./bioinformatics.html">Bioinformatics</a>
+    </div>
+  </div> 
+  <a href="./contact.html">Contact Us</a>
+
+  <a href="about.html">About Us</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="container1">
+<h1>Vector Designing</h1>
+<ul>
+  <li>Mammalian Gene Expression Vectors</li>
+  <li>Mammalian Inducible Gene Expression Vectors (Tet Based)</li>
+  <li>Mammalian Conditional Gene Expression Vectors (Cre-Lox Based)</li>
+  <li>Mammalian CAR (Chimeric Antigen Receptor) Expression Vectors</li>
+  <li>Mammalian Antibody Expression Vectors</li>
+  <li>Mammalian Non-Coding RNA Expression Vectors</li>
+  <li>Mammalian shRNA Knockdown Vectors</li>
+  <li>Mammalian CRISPR Gene Editing Vectors</li>
+  <li>Mammalian CRISPR Gene Regulation Vectors</li>
+  <li>Enhancer/Promoter Testing Vectors</li>
+  <li>Recombinant Protein Expression Vectors</li>
+  <li>In Vitro Transcription Vectors</li>
+  <li>Zebrafish Gene Expression Vectors</li>
+  <li>Drosophila Transformation Vectors</li>
+  <li>Drosophila CRISPR Gene Editing Vectors</li>
+  <li>Plant Gene Expression Vectors</li>
+  <li>Plant CRISPR Gene Editing Vectors</li>
+  <li>Worm Gene Expression Vectors</li>
+  <li>Worm CRISPR Gene Editing Vectors</li>
+</ul>
+<h1>Protein Analysis</h1>
+<ul>
+  <li>Protein stability</li>
+  <li>Protein Atlas</li>
+  <li>Molecular docking </li>
+  <li>Protein string function tool</li>
+  <li>Insilco protein Gel electrophoresis</li>
+  <li>computer aided drug design</li>
+  <li>protein simulation and modeling</li>
+  <li>Protein BLAST</li>
+  <li>Protein primary structure prediction</li>
+  <li>Protein chemical and physical property predication</li>
+  </ul>
+  <h1>DNA sequencing Analysis</h1>
+  <ul>
+  <li>Primer designing</li>
+  <li>DNA sequencing BLAST</li>
+  <li>DNA sequencing Mutation analysis</li>
+  <li>Insilco cloning and restriction digestion</li>
+  <li>Identification of gene structure in genomic DNA</li>
+  <li>Gene promoter finder</li>
+  <li>Gene motif finder</li>
+  <li>Gene CPG island finder</li>
+  <li>Open reading frame finder</li>
+  <li>Codon split</li>
+  <li>Codon plotting</li>
+  <li>Insilco gel electrophoresis</li>
+  <li>Insilco PCR complete analysis</li>
+  <li>DNA sequence analysis</li>
+  <li>DNA and protein docking</li>
+  <li>Cancer gene expression</li>
+  <li>Genome assembly and annotation </li>
+  <li>Gene/protein function</li>
+  </ul>
+  </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
